@@ -1,5 +1,5 @@
 // Set this to the deployed Cloudflare Worker URL.
-const API_URL = "https://YOUR-WORKER.workers.dev";
+const API_URL = "https://ydkgpt.uchihajikoma.workers.dev/";
 const $ = s => document.querySelector(s);
 let messages = [], busy = false;
 
