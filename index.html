@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101116">
+  <title>YDKgpt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">Y</div><span>YDK<span class="muted">gpt</span></span></div>
+    <button class="new-chat" id="newChat">＋ Cuộc trò chuyện mới</button>
+    <div class="side-label">GẦN ĐÂY</div>
+    <div id="history" class="history"></div>
+    <div class="side-bottom">
+      <div class="model-pill"><span class="pulse"></span> DeepSeek · Chat</div>
+      <div class="profile"><div class="avatar">Y</div><div><b>YDKgpt</b><small>AI coding assistant</small></div></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn">☰</button>
+      <div class="mobile-brand">YDK<span>gpt</span></div>
+      <div class="model-select">DeepSeek Chat <span>⌄</span></div>
+      <button class="icon-btn" id="clearBtn" title="Xóa hội thoại">⌫</button>
+    </header>
+    <section class="conversation" id="conversation">
+      <div class="welcome" id="welcome">
+        <div class="welcome-mark">Y</div>
+        <h1>YDK<span>gpt</span></h1>
+        <p>coding, debugging, and building. let's lock in.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Giải thích cách hoạt động của REST API bằng ví dụ JavaScript."><b>⌘</b><span><strong>Giải thích code</strong><small>Hiểu một khái niệm kỹ thuật</small></span></button>
+          <button class="suggestion" data-prompt="Tạo một trang web portfolio responsive bằng HTML, CSS và JavaScript."><b>⌁</b><span><strong>Xây dựng website</strong><small>Bắt đầu một dự án mới</small></span></button>
+          <button class="suggestion" data-prompt="Hướng dẫn debug một ứng dụng Node.js bị lỗi 500."><b>⌕</b><span><strong>Debug lỗi</strong><small>Tìm nguyên nhân và cách sửa</small></span></button>
+          <button class="suggestion" data-prompt="Giải thích các nguyên tắc bảo mật cơ bản để bảo vệ ứng dụng web."><b>◇</b><span><strong>Bảo mật ứng dụng</strong><small>Phòng thủ và kiểm tra an toàn</small></span></button>
+        </div>
+      </div>
+      <div id="messages" class="messages"></div>
+    </section>
+    <footer class="composer-wrap">
+      <form id="chatForm" class="composer">
+        <textarea id="prompt" rows="1" placeholder="Nhắn tin cho YDKgpt..." autocomplete="off"></textarea>
+        <div class="composer-bottom"><span class="hint">YDKgpt có thể mắc lỗi. Hãy kiểm tra thông tin quan trọng.</span><button id="sendBtn" class="send-btn" type="submit">↑</button></div>
+      </form>
+      <div class="footer-note">Powered by DeepSeek API</div>
+    </footer>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
